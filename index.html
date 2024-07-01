@@ -3,60 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Donat Lumer - Donat Lezat dari Lahat, Sumatra Selatan">
+    <meta name="description" content="Produk Donat Lumer">
     <meta name="author" content="Donat Lumer">
-    <title>Donat Lumer - Home</title>
+    <title>Home - Donat Lumer</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.ico">
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<style>
-        body {
-            background-color: #EDEAC8;
-        }
-        .navbar {
-            background-color: #ffcc00;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .navbar-brand {
-            color: #F0EEC3 !important;
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-        }
-        .navbar-brand img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-        }
-        .navbar-nav .nav-link {
-            color: #000000 !important;
-            transition: color 0.3s;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #779CC3 !important;
-        }
-        .btn-outline-dark {
-            border-color: #000000;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .btn-outline-dark:hover {
-            background-color: #EDEAC8;
-            color: #779CC3;
-        }
-        .bg-dark {
-            background-color: #A8977E !important;
-        }
-        .card, .dropdown-menu, .footer {
-            background-color: #ffffff;
-        }
-        .badge {
-            background-color: #2E4359;
-        }
-        .text-white {
-            color: #000000;
-        }
-    </style>
+    body {
+        background-color: #EDEAC8;
+    }
+    .navbar {
+        background-color: #ffcc00;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .navbar-brand {
+        color: #F0EEC3 !important;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    }
+    .navbar-brand img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .navbar-nav .nav-link {
+        color: #000000 !important;
+        transition: color 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #779CC3 !important;
+    }
+    .btn-outline-dark {
+        border-color: #000000;
+        color: #000000;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-outline-dark:hover {
+        background-color: #EDEAC8;
+        color: #779CC3;
+    }
+    .bg-dark {
+        background-color: #A8977E !important;
+    }
+    .card, .dropdown-menu, .footer {
+        background-color: #ffffff;
+    }
+    .badge {
+        background-color: #2E4359;
+    }
+    .text-white {
+        color: #000000;
+    }
+    .btn-pesan-sekarang {
+        background-color: #ffcc00;
+        color: #ffffff;
+        border: 2px solid #ffcc00;
+        padding: 15px 30px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        border-radius: 50px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+    }
+    .btn-pesan-sekarang:hover {
+        background-color: #ffaa00;
+        border-color: #ffaa00;
+        transform: translateY(-2px);
+    }
+    .btn-pesan-sekarang:active {
+        background-color: #cc9900;
+        border-color: #cc9900;
+        transform: translateY(0);
+    }
+</style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -80,12 +101,12 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Keranjang
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
-                </form>
+					<a class="btn btn-outline-dark" href="cart.html">
+						<i class="bi-cart-fill me-1"></i>
+						Keranjang
+						<span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+					</a>
+				</form>
             </div>
         </div>
     </nav>
@@ -93,185 +114,106 @@
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
                 <img src="assets/logo.png" alt="Logo Donat Lumer" style="width: 200px; height: 200px; margin-bottom: 20px;">
-                <h1 class="display-4 fw-bolder">Selamat Datang di Donat Lumer</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Donat Lezat dari Lahat, Sumatra Selatan</p>
+                <h1 class="display-4 fw-bolder">Produk Kami</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Jelajahi berbagai donat lezat kami</p>
             </div>
         </div>
     </header>
-     <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <!-- Card items here -->
-				<div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="assets\choco_cheese.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Choco Cheese</h5>
-                                    Rp 54.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
+    <section class="item py-5">
+        <div class="container">
+            <div class="slider position-relative">
+                <button class="prev position-absolute top-50 start-0 translate-middle-y btn btn-light" onclick="slidePrev()">&#10094;</button>
+                <div class="slides position-relative">
+                    <div class="slide">
+                        <img src="assets/choco_nuts.jpg" alt="Choco Nuts" class="w-100">
+                        <div class="badge-container position-absolute bottom-0 start-0 m-3">
+							<div class="badge bg-dark text-white position-absolute">Diskon</div>
+							<br>
+                            <div class="badge bg-dark text-white p-2">Choco Nuts</div>
+                            <div class="price bg-dark text-white p-2 mt-1">
+								<span class="text-muted text-decoration-line-through">Rp 90.000</span>
+								Rp 52.000 / pack
+							</div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Diskon</div>
-                            <img class="card-img-top" src="assets\choco_nuts.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Choco Nuts</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <span class="text-muted text-decoration-line-through">Rp 90.000</span>
-                                    Rp 52.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
+                    <div class="slide">
+                        <img src="assets/dark_forest.jpg" alt="Dark Forest" class="w-100">
+                        <div class="badge-container position-absolute bottom-0 start-0 m-3">
+							<div class="badge bg-dark text-white position-absolute">Populer</div>
+							<br>
+                            <div class="badge bg-dark text-white p-2">Dark Forest</div>
+                            <div class="price bg-dark text-white p-2 mt-1">
+								<span class="text-muted text-decoration-line-through">Rp 75.000</span>
+								Rp 35.000 / pack
+							</div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Populer</div>
-                            <img class="card-img-top" src="assets\dark_forest.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Dark Forest</h5>
-                                    <span class="text-muted text-decoration-line-through">Rp 75.000</span>
-                                    Rp 35.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
+                    <div class="slide">
+                        <img src="assets/mrs_sweety.jpg" alt="Mrs. Sweety" class="w-100">
+                        <div class="badge-container position-absolute bottom-0 start-0 m-3">
+							<div class="badge bg-dark text-white position-absolute">Diskon</div>
+							<br>
+                            <div class="badge bg-dark text-white p-2">Mrs Sweety</div>
+                            <div class="price bg-dark text-white p-2 mt-1">
+								<span class="text-muted text-decoration-line-through">Rp 50.000</span>
+								Rp 18.000 / pack
+							</div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="assets\greenland.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Greenland</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    Rp 60.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
+                    <div class="slide">
+                        <img src="assets/sugar_ice.jpg" alt="Sugar Ice" class="w-100">
+                        <div class="badge-container position-absolute bottom-0 start-0 m-3">
+							<div class="badge bg-dark text-white position-absolute">Diskon</div>
+							<br>
+                            <div class="badge bg-dark text-white p-2">Sugar Ice</div>
+                            <div class="price bg-dark text-white p-2 mt-1">
+								<span class="text-muted text-decoration-line-through">Rp 45.000</span>
+								Rp 15.000 / pack
+							</div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="assets\king_almond.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">King Almond</h5>
-                                    Rp 47.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Diskon</div>
-                            <img class="card-img-top" src="assets\mrs_sweety.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Mrs Sweety</h5>
-                                    <span class="text-muted text-decoration-line-through">Rp 50.000</span>
-									Rp 18.000 / pack 
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                           
-                            <img class="card-img-top" src="assets\oreo_reo.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Oreo Reo</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    Rp 27.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Diskon</div>
-                            <img class="card-img-top" src="assets\sugar_ice.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Sugar Ice</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-									<span class="text-muted text-decoration-line-through">Rp 45.000</span>
-                                    Rp 15.000 / pack
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <button class="next position-absolute top-50 end-0 translate-middle-y btn btn-light" onclick="slideNext()">&#10095;</button>
             </div>
         </div>
     </section>
-	<section class="py-5">
+	<div class="text-center my-4">
+    <a href="products.html" class="btn btn-pesan-sekarang btn-lg">Pesan Sekarang!</a>
+	</div>
+    <section class="py-5">
         <div class="container px-4 px-lg-5">
             <div class="text-center">
-						<h2 class="fw-bolder">Alamat Kami</h2>
-						<img src="assets\alamat.jpg" alt="Lokasi Donat Lumer" class="img-fluid" style="width: 550px; height: 350px; margin-bottom: 20px;">
-						<div class="container px-4 px-lg-5 text-center">
-					<h2 class="fw-bolder">Alamat dan Kontak</h2>
-					<p class="lead mb-0">Jl. RE Martadinata Bandar Agung, Lahat, Indonesia</p>
-					<p class="lead mb-0">Telepon: (021) 123-4567</p>
-					<p class="lead mb-0">Email: info@donatlumer.com</p>
+                <h2 class="fw-bolder">Alamat Kami</h2>
+                <img src="assets/alamat.jpg" alt="Lokasi Donat Lumer" class="img-fluid" style="width: 550px; height: 350px; margin-bottom: 20px;">
+                <h2 class="fw-bolder">Alamat dan Kontak</h2>
+                <p class="lead mb-0">Jl. RE Martadinata Bandar Agung, Lahat, Indonesia</p>
+                <p class="lead mb-0">Telepon: (021) 123-4567</p>
+                <p class="lead mb-0">Email: info@donatlumer.com</p>
             </div>
         </div>
     </section>
     <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white">Hak Cipta &copy; Donat Lumer 2024</p></div>
+        <div class="container">
+            <p class="m-0 text-center text-white">Hak Cipta &copy; Donat Lumer 2024</p>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script><script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: name, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produk telah ditambahkan ke keranjang');
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.querySelector('.badge').textContent = cart.length;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
 </body>
 </html>
