@@ -108,14 +108,16 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Choco Cheese</h5>
-                                    Rp 54.000 / pack
-                                </div>
+                                    <p>Rp 54.000 / pack</p>
                             </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Choco Cheese', 54000)">Tambah ke Keranjang</button>
                             </div>
                         </div>
                     </div>
+                </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Diskon</div>
@@ -135,8 +137,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Choco Nuts', 52000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col mb-5">
@@ -151,8 +155,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Dark Forest', 35000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col mb-5">
@@ -172,8 +178,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Greenland', 60000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col mb-5">
@@ -186,8 +194,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('King Almond', 47000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col mb-5">
@@ -202,8 +212,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Mrs Sweety', 18000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col mb-5">
@@ -224,8 +236,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Oreo Reo', 27000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="col mb-5">
@@ -242,13 +256,15 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-									                  <span class="text-muted text-decoration-line-through">Rp 45.000</span>
+									<span class="text-muted text-decoration-line-through">Rp 45.000</span>
                                     Rp 15.000 / pack
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Tambah ke Keranjang</a></div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('Sugar Ice', 15000)">Tambah ke Keranjang</button>
                             </div>
+                        </div>
                         </div>
                     </div>
             </div>
@@ -261,5 +277,24 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+	<script>
+        // Function to add item to the cart
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: name, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produk telah ditambahkan ke keranjang');
+            updateCartCount();
+        }
+
+        // Function to update the cart count
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.querySelector('.badge').textContent = cart.length;
+        }
+
+        // Update the cart count on page load
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
 </body>
 </html>
